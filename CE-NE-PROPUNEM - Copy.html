@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+    <title>Tennis Club Sun </title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,500;1,200;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css">
+
+</head>
+<body>
+    <section class="sub-header">
+        <nav>
+            <a href="index.html"><img src="images/logo1.png"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">DESPRE NOI</a></li>
+                    <li><a href="Cursuri.html">INITIERE SI ANTRENAMENTE</a></li>
+                    <li><a href="pagina3.html">DE CE TENIS CLUB SUN</a></li>
+                    <li><a href="obiective.html">OBIECTIVE</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+        <h1>Obiective</h1>
+
+    </section>
+
+    <!--------Obiective continut------->
+    <section class="about-us">
+        <div class="row">
+            <div class="about-col">
+                <h1> Ne propunem</h1>
+                <p>
+                    - Creșterea numărului de practicanți ai tenisului de câmp la nivel zonal, cu 30% în următorii 3 ani.
+                </p>
+                <p>- Creșterea cu 25% a numărului de sportivi juniori care obțin rezultate valoroase în competițiile naționale oficiale, începând cu 2020.
+                </p>
+                <p>- Creșterea numărului de practicanți ai tenisului adaptat la nivel local, cu 15% în următorii 3 ani.</p>
+                <p>Învățarea jocului de tenis trebuie să înceapă la 5-6 ani, să se desfășoare sistematic, urmărind formarea corectă a deprinderilor. Procesul învățării, volumul deprinderilor și cunoștințelor se planifică pe o perioadă de 6-8 ani. Ulterior, în funcție de progresele realizate, planificarea pregătirii la copii și juniori se individualizează. În eșalonarea sarcinilor învățării și perfecționării tehnicii și tacticii vor fi avute în vedere cerințele jocului competițional, punându-se accent pe modul cum utilizează copiii și juniorii, loviturile în meci.</p>
+                <a href="" class="hero-btn red-btn">EXPLOREAZA ACUM PE PAGINA NOASTRA DE FACEBOOK</a>
+            </div>
+            <div class="about-col">
+                <img src="images/tenis.jpg" />
+                <img src="images/images.jpg" />
+                <img src="images/me2.jpg" />
+            </div>
+        </div>
+
+
+    </section>
+
+
+
+
+
+
+
+
+
+    <!---------JavaScript for Toggle Menu-------->
+    <script>
+
+        var navLinks = document.getElementById("navLinks");
+        function shouMenu() {
+            navLinks.style.right = "0";
+        }
+        function hideMenu() {
+            navLinks.style.right = "-200px";
+    </script>
+
+
+
+
+</body>
+</html>

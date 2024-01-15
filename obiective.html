@@ -1,0 +1,176 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+    <title>Tennis Club Sun </title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,500;1,200;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css">
+
+</head>
+<body>
+    <section class="sub-header">
+        <nav>
+            <a href="index.html"><img src="images/logo1.png"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">DESPRE NOI</a></li>
+                    <li><a href="Cursuri.html">INITIERE SI ANTRENAMENTE</a></li>
+                    <li><a href="pagina3.html">DE CE TENIS CLUB SUN</a></li>
+                    <li><a href="obiective.html">OBIECTIVE</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+        <h1>Obiective</h1>
+
+    </section>
+
+    <!--------Obiective continut------->
+    <section class="about-us">
+        <div class="row">
+            <div class="about-col">
+                <h1> Ne propunem</h1>
+                <p>
+                    - Creșterea numărului de practicanți ai tenisului de câmp la nivel zonal, cu 30% în următorii 3 ani.
+                </p>
+                <p>
+                    - Creșterea cu 25% a numărului de sportivi juniori care obțin rezultate valoroase în competițiile naționale oficiale, începând cu 2020.
+                </p>
+                <p>- Creșterea numărului de practicanți ai tenisului adaptat la nivel local, cu 15% în următorii 3 ani.</p>
+                <p>Învățarea jocului de tenis trebuie să înceapă la 5-6 ani, să se desfășoare sistematic, urmărind formarea corectă a deprinderilor. Procesul învățării, volumul deprinderilor și cunoștințelor se planifică pe o perioadă de 6-8 ani. Ulterior, în funcție de progresele realizate, planificarea pregătirii la copii și juniori se individualizează. În eșalonarea sarcinilor învățării și perfecționării tehnicii și tacticii vor fi avute în vedere cerințele jocului competițional, punându-se accent pe modul cum utilizează copiii și juniorii, loviturile în meci.</p>
+                <a href="https://ro-ro.facebook.com/TenisClubSun/" class="hero-btn red-btn">EXPLOREAZA ACUM PE PAGINA NOASTRA DE FACEBOOK</a>
+            </div>
+            <div class="about-col">
+                <img src="images/tenis.jpg" />
+                <img src="images/images.jpg" />
+                <img src="images/me2.jpg" />
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+    </section>
+
+
+    <style>
+        .form-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        form {
+            width: 400px;
+            padding: 20px;
+            background-color: #f5f5f5;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        h2 {
+            margin-top: 0;
+        }
+
+        input[type="radio"] {
+            margin-bottom: 10px;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+
+    <div class="form-container">
+        <h2>Întrebări de cultură generală din tenis</h2>
+        <form onsubmit="return false;">
+            <h2>1. Care este vârsta de la care se poate învăța tenisul?</h2>
+            <input type="radio" name="r1" value="7 ani"> 7 ani<br>
+            <input type="radio" name="r1" value="nu există vârstă"> nu există vârstă<br>
+            <input type="radio" name="r1" value="4-5 ani"> 4-5 ani<br>
+            <input type="radio" name="r1" value="10 ani"> 10 ani<br>
+
+            <h2>2. Câte seturi sunt într-un meci?</h2>
+            <input type="radio" name="r2" value="2 din 3 seturi"> 2 din 3 seturi<br>
+            <input type="radio" name="r2" value="1 set"> 1 set<br>
+            <input type="radio" name="r2" value="4 din 6 seturi"> 4 din 6 seturi<br>
+            <input type="radio" name="r2" value="2 seturi"> 2 seturi<br>
+
+            <h2>3. Câte turnee de mare slam există?</h2>
+            <input type="radio" name="r3" value="2"> 2<br>
+            <input type="radio" name="r3" value="5"> 5<br>
+            <input type="radio" name="r3" value="4"> 4<br>
+            <input type="radio" name="r3" value="1"> 1<br>
+
+
+            <button onclick="checkAnswers()">Trimite</button>
+        </form>
+    </div>
+
+    <p id="result"></p>
+
+    <script>
+
+        function checkAnswers() {
+            var r1 = document.querySelector('input[name="r1"]:checked');
+            var r2 = document.querySelector('input[name="r2"]:checked');
+            var r3 = document.querySelector('input[name="r3"]:checked');
+            
+            var score = 0;
+
+            if (r1 && r1.value === "4-5 ani") {
+                score += 25;
+            }
+
+            if (r2 && r2.value === "2 din 3 seturi") {
+                score += 25;
+            }
+
+            if (r3 && r3.value === "4") {
+                score += 50;
+            }
+
+          
+            document.getElementById("result").innerHTML = "Punctajul tău este: " + score;
+        }
+
+    </script>
+    
+
+
+
+
+    <!---------JavaScript for Toggle Menu-------->
+    <script>
+
+        var navLinks = document.getElementById("navLinks");
+        function shouMenu() {
+            navLinks.style.right = "0";
+        }
+        function hideMenu() {
+            navLinks.style.right = "-200px";
+    </script>
+
+
+
+
+</body>
+</html>

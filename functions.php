@@ -44,10 +44,36 @@ function signup($data)
 	return $errors;
 }
 
+
+
+
+
+
+
 function login($data)
 {
-	$errors = array();
- 
+		$errors = array();
+	 
+		$adminEmail = 'admin@gmail.com';
+		$adminPassword = 'parola_admin';
+	
+		$inputEmail = isset($data['email']) ? $data['email'] : null;
+		$inputPassword = isset($data['password']) ? $data['password'] : null;
+	
+
+
+		// Verifica dacă array-ul $data conține cheia 'username' înainte de a încerca să o accesezi
+		$inputUsername = isset($data['email']) ? $data['email'] : null;
+		$inputPassword = isset($data['password']) ? $data['password'] : null;
+	
+		if ($inputEmail == $adminEmail && $inputPassword == $adminPassword) {
+			// Autentificare cu succes pentru administrator
+			$_SESSION['admin_authenticated'] = true;
+			header("Location: admin.php");
+			die();
+		}
+
+
 	//validate 
 	if(!filter_var($data['email'],FILTER_VALIDATE_EMAIL)){
 		$errors[] = "Please enter a valid email";
@@ -144,3 +170,51 @@ function check_verified(){
  	
 }
 
+
+
+
+
+
+function addNews($title, $content) {
+    try {
+        $string = "mysql:host=localhost;dbname=tennis";
+        $con = new PDO($string, 'root', '');
+
+        if (!$con) {
+            return false;
+        }
+
+        $query = "INSERT INTO news (title, content) VALUES (:title, :content)";
+        $stm = $con->prepare($query);
+        $stm->bindParam(':title', $title, PDO::PARAM_STR);
+        $stm->bindParam(':content', $content, PDO::PARAM_STR);
+        $result = $stm->execute();
+
+        return $result;
+    } catch (PDOException $e) {
+        return false;
+    }
+}
+
+
+
+
+function getAllNews() {
+    try {
+        $string = "mysql:host=localhost;dbname=tennis";
+        $con = new PDO($string, 'root', '');
+
+        if (!$con) {
+            return false;
+        }
+
+        $query = "SELECT * FROM news ORDER BY date DESC";
+        $stm = $con->query($query);
+        $news = $stm->fetchAll(PDO::FETCH_OBJ);
+
+        return $news;
+    } catch (PDOException $e) {
+        return false;
+    }
+}
+?>

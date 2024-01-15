@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+    <title>Tennis Club Sun </title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,500;1,200;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css">
+
+</head>
+<body>
+    <section class="sub-header">
+        <nav>
+            <a href="index.html"><img src="images/logo1.png"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">DESPRE NOI</a></li>
+                    <li><a href="booking.php">INCHIRIAZA UN TEREN</a></li>
+                    <li><a href="pagina3.html">DE CE TENIS CLUB SUN</a></li>
+                    <li><a href="login1.php">LOGIN</a></li>
+                    <li><a href="stiri.php">STIRI</a></li>
+                    <li><a href="profile.php">PROFIL</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+        <h1>De ce Tenis Club Sun</h1>
+
+    </section>
+
+    <!--------De ce noi continut------->
+    <section class="about-us">
+        <div class="row">
+            <div class="about-col">
+                <h1> DE CE SUNTEM PRIMA OPȚIUNE?</h1>
+                <p>
+                    Modul în care ne comportăm cu copiii, sistemul de antrenament și rezultatele obținute, ne recomandă să devenim partenerii copiilor dvs. pentru inițiere și performanță în tenis.
+
+                    Antrenorii clubului sunt pregătiți în școli de specialitate, utilizează metode și tehnici care asigură performanța demonstrată a copiilor..
+                </p>
+                <a href="https://ro-ro.facebook.com/TenisClubSun/" class="hero-btn red-btn">EXPLOREAZA ACUM PE PAGINA NOASTRA DE FACEBOOK</a>
+            </div>
+            <div class="about-col">
+                <img src="images/WhatsApp-Image-2020-11-19-at-17.56.39.jpeg.jpg"
+            </div>
+        </div>
+
+    </section>
+
+
+
+
+
+
+
+
+
+    <!---------JavaScript for Toggle Menu-------->
+    <script>
+
+        var navLinks = document.getElementById("navLinks");
+        function shouMenu() {
+            navLinks.style.right = "0";
+        }
+        function hideMenu() {
+            navLinks.style.right = "-200px";
+    </script>
+
+
+
+
+</body>
+</html>
+
+
+
