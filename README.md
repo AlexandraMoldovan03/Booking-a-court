@@ -1,6 +1,6 @@
 # Booking-a-court
+## Description
 
-##Description
 TennisCourtBooking is a web application that simplifies the process of reserving tennis courts. Users can easily register and log in to the platform, where they have the ability to view their profile, manage reservations, and receive updates. The site provides a seamless experience for tennis enthusiasts, offering a convenient way to book a court at a specific time on a chosen day.
 
 ## Features
